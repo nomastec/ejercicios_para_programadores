@@ -1,9 +1,5 @@
 
-
-// FUNCION showDetails
-
-
-let showDetails = (parameter) => {
+let selfCheckout = (parameter) => {
   let subtotal = 0;
   for (let i = 0; i < parameter.length; i++) {
     let zeroElement = parameter[i];

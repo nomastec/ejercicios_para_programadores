@@ -4,31 +4,31 @@
   </head>
   <body>
     <script type="text/javascript" src=".\testDd.js"></script>
-    <script type="text/javascript" src=".\showDetails.js"></script>
+    <script type="text/javascript" src=".\Ejercicio_10_Self_Checkout.js"></script>
     <script>
 
 
 
 
-testDd(() => showDetails([]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');
-testDd(() => showDetails([{price : 0, quantity : 1}]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');
-testDd(() => showDetails([{price : 1, quantity : 1}]), 'Subtotal: $1.00' + ' ' + 'Tax: $0.06' + ' ' + 'Total: $1.06');
-testDd(() => showDetails([{price : 2, quantity : 1}]), 'Subtotal: $2.00' + ' ' + 'Tax: $0.11' + ' ' + 'Total: $2.11');
-testDd(() => showDetails([{price : 3, quantity : 1}]), 'Subtotal: $3.00' + ' ' + 'Tax: $0.17' + ' ' + 'Total: $3.17');
-testDd(() => showDetails([{price : 4, quantity : 1}]), 'Subtotal: $4.00' + ' ' + 'Tax: $0.22' + ' ' + 'Total: $4.22');
-testDd(() => showDetails([{price : 25, quantity : 2}, {price : 10, quantity : 1}, {price : 4, quantity : 1}]), 'Subtotal: $64.00' + ' ' + 'Tax: $3.52' + ' ' + 'Total: $67.52');
-testDd(() => showDetails([{price : 25, quantity : 5}, {price : 10, quantity : 9}, {price : 4, quantity : 10}]), 'Subtotal: $255.00' + ' ' + 'Tax: $14.03' + ' ' + 'Total: $269.03');
-testDd(() => showDetails([{price : 129, quantity : 50}, {price : 60, quantity : 19}, {price : 14, quantity : 5}]), 'Subtotal: $7660.00' + ' ' + 'Tax: $421.30' + ' ' + 'Total: $8081.30');
-testDd(() => showDetails([{price : 0, quantity : 15}, {price : 10, quantity : 0}, {price : 0, quantity : 10}]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');
-testDd(() => showDetails([{price : 2, quantity : 8}, {price : 18, quantity : 9}, {price : 4, quantity : 32}]), 'Subtotal: $306.00' + ' ' + 'Tax: $16.83' + ' ' + 'Total: $322.83');
-testDd(() => showDetails([{price : 13, quantity : 25}, {price : 10, quantity : 9}, {price : 41, quantity : 20}]), 'Subtotal: $1235.00' + ' ' + 'Tax: $67.93' + ' ' + 'Total: $1302.93');
-testDd(() => showDetails([{price : 63, quantity : 3}, {price : 1, quantity : 7}, {price : 3, quantity : 11}]), 'Subtotal: $229.00' + ' ' + 'Tax: $12.60' + ' ' + 'Total: $241.60');
-testDd(() => showDetails([{price : 6, quantity : 14}, {price : 5, quantity : 2}, {price : 17, quantity : 19}]), 'Subtotal: $417.00' + ' ' + 'Tax: $22.94' + ' ' + 'Total: $439.94');
-testDd(() => showDetails([{price : 1, quantity : 1}, {price : 1, quantity : 1}, {price : 1, quantity : 1}, {price : 1, quantity : 1}]), 'Subtotal: $4.00' + ' ' + 'Tax: $0.22' + ' ' + 'Total: $4.22');
-testDd(() => showDetails([{price : 1, quantity : 1}, {price : 1, quantity : 1}]), 'Subtotal: $2.00' + ' ' + 'Tax: $0.11' + ' ' + 'Total: $2.11');
-testDd(() => showDetails([{price : 33, quantity : 1}, {price : 1, quantity : 11}]), 'Subtotal: $44.00' + ' ' + 'Tax: $2.42' + ' ' + 'Total: $46.42');
-testDd(() => showDetails([{price : 125, quantity : 2}, {price : 110, quantity : 1}]), 'Subtotal: $360.00' + ' ' + 'Tax: $19.80' + ' ' + 'Total: $379.80');
-testDd(() => showDetails([{price : 125, quantity : 2}, {price : 110, quantity : 1}, {price : 55, quantity : 2}, {price : 4, quantity : 3}, {price : 3, quantity : 5}]), 'Subtotal: $497.00' + ' ' + 'Tax: $27.34' + ' ' + 'Total: $524.34');
+testDd(() => selfCheckout([]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');
+testDd(() => selfCheckout([{price : 0, quantity : 1}]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');
+testDd(() => selfCheckout([{price : 1, quantity : 1}]), 'Subtotal: $1.00' + ' ' + 'Tax: $0.06' + ' ' + 'Total: $1.06');
+testDd(() => selfCheckout([{price : 2, quantity : 1}]), 'Subtotal: $2.00' + ' ' + 'Tax: $0.11' + ' ' + 'Total: $2.11');
+testDd(() => selfCheckout([{price : 3, quantity : 1}]), 'Subtotal: $3.00' + ' ' + 'Tax: $0.17' + ' ' + 'Total: $3.17');
+testDd(() => selfCheckout([{price : 4, quantity : 1}]), 'Subtotal: $4.00' + ' ' + 'Tax: $0.22' + ' ' + 'Total: $4.22');
+testDd(() => selfCheckout([{price : 25, quantity : 2}, {price : 10, quantity : 1}, {price : 4, quantity : 1}]), 'Subtotal: $64.00' + ' ' + 'Tax: $3.52' + ' ' + 'Total: $67.52');
+testDd(() => selfCheckout([{price : 25, quantity : 5}, {price : 10, quantity : 9}, {price : 4, quantity : 10}]), 'Subtotal: $255.00' + ' ' + 'Tax: $14.03' + ' ' + 'Total: $269.03');
+testDd(() => selfCheckout([{price : 129, quantity : 50}, {price : 60, quantity : 19}, {price : 14, quantity : 5}]), 'Subtotal: $7660.00' + ' ' + 'Tax: $421.30' + ' ' + 'Total: $8081.30');
+testDd(() => selfCheckout([{price : 0, quantity : 15}, {price : 10, quantity : 0}, {price : 0, quantity : 10}]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');
+testDd(() => selfCheckout([{price : 2, quantity : 8}, {price : 18, quantity : 9}, {price : 4, quantity : 32}]), 'Subtotal: $306.00' + ' ' + 'Tax: $16.83' + ' ' + 'Total: $322.83');
+testDd(() => selfCheckout([{price : 13, quantity : 25}, {price : 10, quantity : 9}, {price : 41, quantity : 20}]), 'Subtotal: $1235.00' + ' ' + 'Tax: $67.93' + ' ' + 'Total: $1302.93');
+testDd(() => selfCheckout([{price : 63, quantity : 3}, {price : 1, quantity : 7}, {price : 3, quantity : 11}]), 'Subtotal: $229.00' + ' ' + 'Tax: $12.60' + ' ' + 'Total: $241.60');
+testDd(() => selfCheckout([{price : 6, quantity : 14}, {price : 5, quantity : 2}, {price : 17, quantity : 19}]), 'Subtotal: $417.00' + ' ' + 'Tax: $22.94' + ' ' + 'Total: $439.94');
+testDd(() => selfCheckout([{price : 1, quantity : 1}, {price : 1, quantity : 1}, {price : 1, quantity : 1}, {price : 1, quantity : 1}]), 'Subtotal: $4.00' + ' ' + 'Tax: $0.22' + ' ' + 'Total: $4.22');
+testDd(() => selfCheckout([{price : 1, quantity : 1}, {price : 1, quantity : 1}]), 'Subtotal: $2.00' + ' ' + 'Tax: $0.11' + ' ' + 'Total: $2.11');
+testDd(() => selfCheckout([{price : 33, quantity : 1}, {price : 1, quantity : 11}]), 'Subtotal: $44.00' + ' ' + 'Tax: $2.42' + ' ' + 'Total: $46.42');
+testDd(() => selfCheckout([{price : 125, quantity : 2}, {price : 110, quantity : 1}]), 'Subtotal: $360.00' + ' ' + 'Tax: $19.80' + ' ' + 'Total: $379.80');
+testDd(() => selfCheckout([{price : 125, quantity : 2}, {price : 110, quantity : 1}, {price : 55, quantity : 2}, {price : 4, quantity : 3}, {price : 3, quantity : 5}]), 'Subtotal: $497.00' + ' ' + 'Tax: $27.34' + ' ' + 'Total: $524.34');
 
 
     </script>
