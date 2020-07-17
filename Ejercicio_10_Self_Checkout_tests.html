@@ -3,38 +3,12 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <script type="text/javascript" src="..\Mateu_Clases_JavaScript\Fuentes_librerias_JavaScript\onlyNumberIn.js">
-    </script>
+    <script type="text/javascript" src=".\testDd.js"></script>
+    <script type="text/javascript" src=".\showDetails.js"></script>
     <script>
 
 
 
-let showDetails = (parameter) => {
-  let subtotal = 0;
-  for (let i = 0; i < parameter.length; i++) {
-    let zeroElement = parameter[i];
-    subtotal = subtotal + (zeroElement.price * zeroElement.quantity);
-  }
-  const taxes = 5.5;
-  let taxesValue = (Math.round(subtotal * taxes)) / 100;
-  let taxesValueFixed = taxesValue.toFixed(2);
-  let total = subtotal + taxesValue;
-  let totalFixed = total.toFixed(2);
-  return 'Subtotal: $' + subtotal + '.00' + ' ' + 'Tax: $' + taxesValueFixed + ' ' + 'Total: $' + totalFixed;
-};
-
-let howItems = [];
-let numberOfItems = onlyNumberIn('Introduce el número de artículos para realizar el cálculo total de la factura');
-for (let j = 1; j < numberOfItems + 1; j++) {
-  let price = onlyNumberIn('Introduce el precio del producto, ' + j);
-  let quantity = onlyNumberIn('Introduce la cantidad de articulos adquiridos de este.');
-  howItems.push({price : price, quantity : quantity});
-};
-
-
-
-
-showDetails(howItems);
 
 testDd(() => showDetails([]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');
 testDd(() => showDetails([{price : 0, quantity : 1}]), 'Subtotal: $0.00' + ' ' + 'Tax: $0.00' + ' ' + 'Total: $0.00');

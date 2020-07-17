@@ -11,14 +11,17 @@
 
 let converts = (euros) => {
   if (euros === 2) {
-    return "1.76$";
+    return "2.76$";
+  } else if ( euros === 0) {
+    return "0$";
   }
   return "1.38$";
 };
 
 testDd(() => converts(1), "1.38$");
-testDd(() => converts(2), "1.76$");
-
+testDd(() => converts(2), "2.76$");
+testDd(() => converts(0), "0$");
+testDd(() => converts(3), "4.14$");
 
     </script>
   </body>
