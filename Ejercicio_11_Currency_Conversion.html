@@ -3,25 +3,19 @@
     <meta charset="UTF-8">
   </head>
   <body>
+    <script type="text/javascript" src=".\Ejercicio_11_Currency_Conversion.js"></script>
     <script type="text/javascript" src=".\testDd.js"></script>
     <script>
 
 
 
-let converts = (euros) => {
-  const exchangeRate = 137.51;
-  let result = Math.round(euros * exchangeRate) / 100;
-  return result + "$"
-};
+let amount = prompt("Input amount of Euro to convert to US $.");
+let amountOutput = converts(amount);
+alert(amountOutput);
 
-testDd(() => converts(1), "1.38$");
-testDd(() => converts(2), "2.75$");
-testDd(() => converts(0), "0$");
-testDd(() => converts(3), "4.13$");
-testDd(() => converts(4), "5.5$");
-testDd(() => converts(1.3), "1.79$");
-testDd(() => converts("a"), "NaN$");
-testDd(() => converts(true), "1.38$");
+converts(amount);
+
+
 
 
     </script>
