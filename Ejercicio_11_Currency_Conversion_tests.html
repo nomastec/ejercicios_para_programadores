@@ -4,15 +4,11 @@
   </head>
   <body>
     <script type="text/javascript" src=".\testDd.js"></script>
+    <script type="text/javascript" src=".\Ejercicio_11_Currency_Conversion.js"></script>
     <script>
 
 
 
-let converts = (euros) => {
-  const exchangeRate = 137.51;
-  let result = Math.round(euros * exchangeRate) / 100;
-  return result + "$"
-};
 
 testDd(() => converts(1), "1.38$");
 testDd(() => converts(2), "2.75$");
