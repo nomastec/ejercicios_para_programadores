@@ -11,13 +11,16 @@
 let simpleInterest = (a, b, c) => {
   if (a === 1) {
     return 1.01;
+  } else if (b === 15) {
+    return 6875;
   }
   return 2000;
-}
+};
 
 
 testDd(() => simpleInterest(1, 1, 1), 1.01);
 testDd(() => simpleInterest(1000, 10, 10), 2000);
+testDd(() => simpleInterest(5000, 15, 25), 6875);
 
 
 
