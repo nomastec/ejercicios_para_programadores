@@ -10,18 +10,13 @@
 
 
 let amount = prompt("Input amount of Euro to convert");
-let exchangeRate = prompt("Input de country of you want to make de exchange rate between, England, Romania, China or USA");
-if (exchangeRate === "England") {
-  exchangeRate = 0.90;
-} else if (exchangeRate === "Romania") {
-  exchangeRate = 4.84;
-} else if (exchangeRate === "China") {
-  exchangeRate = 8;
-} else if (exchangeRate === "USA") {
-  exchangeRate = 1.3751;
+let country = prompt("Input de country of you want to make de exchange rate between, England, Romania, China or USA");
+if (country != "England" && country != "Romania" && country != "China" && country != "USA") {
+  location.reload();
+} else {
+  let amountOutput = converts(amount, country);
+  alert(amountOutput);
 };
-let amountOutput = converts(amount, exchangeRate);
-alert(amountOutput);
 
 
 

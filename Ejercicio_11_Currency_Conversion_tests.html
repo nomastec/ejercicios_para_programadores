@@ -10,19 +10,21 @@
 
 
 
-testDd(() => converts(1, 1.3751), "1.38$");
-testDd(() => converts(2, 1.3751), "2.75$");
-testDd(() => converts(0, 1.3751), "0.00$");
-testDd(() => converts(3, 1.3751), "4.13$");
-testDd(() => converts(4, 1.3751), "5.50$");
-testDd(() => converts(1.3, 1.3751), "1.79$");
-testDd(() => converts("a", 1.3751), "NaN$");
-testDd(() => converts(true, 1.3751), "1.38$");
-testDd(() => converts(-5, 1.3751), "-6.88$");
+testDd(() => converts(1, "USA"), "1.38$");
+testDd(() => converts(2, "USA"), "2.75$");
+testDd(() => converts(0, "USA"), "0.00$");
+testDd(() => converts(3, "USA"), "4.13$");
+testDd(() => converts(4, "USA"), "5.50$");
+testDd(() => converts(1.3, "USA"), "1.79$");
+testDd(() => converts("a", "USA"), "NaN$");
+testDd(() => converts(true, "USA"), "1.38$");
+testDd(() => converts(-5, "USA"), "-6.88$");
 
-testDd(() => converts(2, 0.90), "1.80 Libras");
-testDd(() => converts(2, 4.84), "9.68 Ron");
-testDd(() => converts(2, 8), "16.00 Yuan/es");
+testDd(() => converts(2, "England"), "1.80 Libras");
+testDd(() => converts(2, "Romania"), "9.68 Ron");
+testDd(() => converts(2, "China"), "16.00 Yuan/es");
+testDd(() => converts(2, "China"), "16.00 Yuan/es");
+testDd(() => converts(2, "England"), "1.80 Libras");
 
     </script>
   </body>
