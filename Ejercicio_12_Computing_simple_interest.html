@@ -9,13 +9,14 @@
     <script>
 
 
+let calculateSimpleInterest = () => {
 let amountToCalculate = onlyNumberIn("Introduce el capital a invertir.");
 let interesRate = onlyNumberIn("Introduce la tasa de interes anual, NO introduzcas el simbolo %.");
 let investmentYears = onlyNumberIn("Introduce en años el tiempo que el capital estará invertido.")
 let result = simpleInterest(amountToCalculate, interesRate, investmentYears);
 alert(result);
-
-
+};
+calculateSimpleInterest();
 
 
 
