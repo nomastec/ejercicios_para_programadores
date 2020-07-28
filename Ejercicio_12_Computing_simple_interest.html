@@ -3,14 +3,15 @@
     <meta charset="UTF-8">
   </head>
   <body>
+    <script type="text/javascript" src=".\onlyNumberIn.js"></script>
     <script type="text/javascript" src=".\Ejercicio_12_Computing_simple_interest.js"></script>
     <script type="text/javascript" src=".\testDd.js"></script>
     <script>
 
 
-let amountToCalculate = prompt("Introduce el capital a invertir.");
-let interesRate = prompt("Introduce la tasa de interes anual, NO introduzcas el simbolo %.");
-let investmentYears = prompt("Introduce en años el tiempo que el capital estará invertido.")
+let amountToCalculate = onlyNumberIn("Introduce el capital a invertir.");
+let interesRate = onlyNumberIn("Introduce la tasa de interes anual, NO introduzcas el simbolo %.");
+let investmentYears = onlyNumberIn("Introduce en años el tiempo que el capital estará invertido.")
 let result = simpleInterest(amountToCalculate, interesRate, investmentYears);
 alert(result);
 
