@@ -1,24 +1,33 @@
 
+let isValidCountry = (country) => {
+  return country === "USA" ||
+         country === "England" ||
+         country === "China" ||
+         country === "Japan" ||
+         country === "Romania";
+};
+let validCountries = "England, Romania, China, Japan, or USA";
 
 let converts = (euros, country) => {
-  let england = 0.90 * 100;
-  let romania = 4.84 * 100;
-  let china = 8 * 100;
-  let usa = 1.3751 * 100;
-  let englandResult = Math.round(euros * england) / 100
-  let romaniaResult = Math.round(euros * romania) / 100
-  let chinaResult = Math.round(euros * china) / 100
-  let usaResult =  Math.round(euros * usa) / 100
-  let englandResultFixed = englandResult.toFixed(2);
-  let romaniaResultFixed = romaniaResult.toFixed(2);
-  let chinaResultFixed = chinaResult.toFixed(2);
-  let usaResultFixed = usaResult.toFixed(2);
-  if (country === "England") {
-    return englandResultFixed + " Libras";
+  let exchangeRate;
+  let currencySymbol;
+  if (country === "USA") {
+    exchangeRate = 1.3751;
+    currencySymbol = "$";
+  } else if (country === "England") {
+    exchangeRate = 0.90;
+    currencySymbol = " Libras";
+  } else if ( country === "China") {
+    exchangeRate = 8;
+    currencySymbol = " Yuan/es";
+  } else if (country === "Japan") {
+    exchangeRate = 123.4228;
+    currencySymbol = " Yen/es";
   } else if (country === "Romania") {
-    return romaniaResultFixed + " Ron";
-  } else if (country === "China") {
-    return chinaResultFixed + " Yuan/es";
-  }
-  return usaResultFixed + "$"
+    exchangeRate = 4.84;
+    currencySymbol = " Ron";
+  };
+  let result = Math.round(euros * (exchangeRate * 100)) / 100;
+  let finalResult = result.toFixed(2);
+  return finalResult + currencySymbol;
 };

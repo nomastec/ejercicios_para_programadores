@@ -4,14 +4,14 @@
   </head>
   <body>
     <script type="text/javascript" src=".\Ejercicio_11_Currency_Conversion.js"></script>
-    <script type="text/javascript" src=".\testDd.js"></script>
+    <script type="text/javascript" src=".\onlyNumberIn.js"></script>
     <script>
 
 
 
-let amount = prompt("Input amount of Euro to convert");
-let country = prompt("Input de country of you want to make de exchange rate between, England, Romania, China or USA");
-if (country != "England" && country != "Romania" && country != "China" && country != "USA") {
+let amount = onlyNumberIn("Input amount of Euro to convert");
+let country = prompt("Input de country of you want to make de exchange rate between, " + validCountries);
+if (!isValidCountry(country)) {
   location.reload();
 } else {
   let amountOutput = converts(amount, country);

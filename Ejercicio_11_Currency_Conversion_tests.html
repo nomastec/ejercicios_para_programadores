@@ -8,7 +8,17 @@
     <script>
 
 
+testDd(() => validCountries, "England, Romania, China, Japan, or USA");
 
+testDd(() => isValidCountry("USA"), true);
+testDd(() => isValidCountry("England"), true);
+testDd(() => isValidCountry("China"), true);
+testDd(() => isValidCountry("Romania"), true);
+testDd(() => isValidCountry("France"), false);
+testDd(() => isValidCountry("Egipt"), false);
+testDd(() => isValidCountry("Portugal"), false);
+testDd(() => isValidCountry("Brasil"), false);
+testDd(() => isValidCountry("Japan"), true);
 
 testDd(() => converts(1, "USA"), "1.38$");
 testDd(() => converts(2, "USA"), "2.75$");
@@ -24,7 +34,8 @@ testDd(() => converts(2, "England"), "1.80 Libras");
 testDd(() => converts(2, "Romania"), "9.68 Ron");
 testDd(() => converts(2, "China"), "16.00 Yuan/es");
 testDd(() => converts(2, "China"), "16.00 Yuan/es");
-testDd(() => converts(2, "England"), "1.80 Libras");
+testDd(() => converts(2, "Japan"), "246.85 Yen/es");
+testDd(() => converts(4, "Japan"), "493.69 Yen/es");
 
     </script>
   </body>
