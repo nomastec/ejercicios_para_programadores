@@ -1,13 +1,11 @@
 
 
 let compoundInterest = (amount, rateInterest, years, rateForYear) => {
-  if (amount === "1") {
-    return "1.01$";
-  } else if (amount === "1000") {
-    return "1104.89$";
-  } else if (amount === "5000") {
-    return "23750.00$";
-  } else {
-    return "18500.00$";
-  }
+  let zeroCalculation = rateInterest / 100;
+  let firstCalculation = 1 + (zeroCalculation / rateForYear);
+  let secondCalculation = rateForYear * years;
+  let thirdCalculation = firstCalculation ** secondCalculation;
+  let finalAmount = amount * thirdCalculation;
+  let finalAmountFixed = finalAmount.toFixed(2);
+  return finalAmountFixed + "$";
 };
