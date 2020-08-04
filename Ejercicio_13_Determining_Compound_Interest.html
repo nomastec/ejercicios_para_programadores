@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript" src=".\onlyNumberIn.js"></script>
+    <script type="text/javascript" src=".\Ejercicio_13_Determining_Compound_Interest.js"></script>
+    <script type="text/javascript" src=".\testDd.js"></script>
+    <script>
+
+
+    let calculateCompoundInterest = () => {
+      let amountToCalculate = onlyNumberIn("Introduce el capital a invertir.");
+      let interesRate = onlyNumberIn("Introduce la tasa de interes anual, NO introduzcas el simbolo %.");
+      let investmentYears = onlyNumberIn("Introduce en años el tiempo que el capital estará invertido.")
+      let timesForYear = onlyNumberIn("Introduce el número de veces por año que se paga el interés.")
+      let result = compoundInterest(amountToCalculate, interesRate, investmentYears, timesForYear);
+      alert(result);
+    };
+    calculateCompoundInterest();
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
