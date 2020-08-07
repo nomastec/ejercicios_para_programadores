@@ -1,7 +1,7 @@
 
 
 let taxCalculator = (amount, state) => {
-  if (state === "WI" || state === "wi" || state === "Wisconsin" || state === "wisconsin") {
+  if (state === "WI" || state === "wi" || state === "Wisconsin" || state === "wisconsin" || state === "WISCONSIN") {
     let amountNumber = parseInt(amount);
     let rateTax = 5.5 / 100;
     let totalRateTax = amountNumber * rateTax;

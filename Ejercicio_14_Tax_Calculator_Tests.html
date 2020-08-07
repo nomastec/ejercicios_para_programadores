@@ -14,7 +14,12 @@
     testDd(() => taxCalculator("10", "WI"), "$10.00" + " $0.55" + " $10.55");
     testDd(() => taxCalculator("20", "WI"), "$20.00" + " $1.10" + " $21.10");
     testDd(() => taxCalculator("27", "WI"), "$27.00" + " $1.49" + " $28.48");
-
+    testDd(() => taxCalculator("27", "wi"), "$27.00" + " $1.49" + " $28.48");
+    testDd(() => taxCalculator("27", "Wisconsin"), "$27.00" + " $1.49" + " $28.48");
+    testDd(() => taxCalculator("27", "wisconsin"), "$27.00" + " $1.49" + " $28.48");
+    testDd(() => taxCalculator("27", "WISCONSIN"), "$27.00" + " $1.49" + " $28.48");
+    testDd(() => taxCalculator("52", "wisconsin"), "$52.00" + " $2.86" + " $54.86");
+    testDd(() => taxCalculator("1385", "wisconsin"), "$1385.00" + " $76.17" + " $1461.17");
 
 
     </script>
