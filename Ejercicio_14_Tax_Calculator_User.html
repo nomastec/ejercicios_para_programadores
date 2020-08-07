@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript" src=".\onlyNumberIn.js"></script>
+    <script type="text/javascript" src=".\Ejercicio_14_Tax_Calculator.js"></script>
+    <script type="text/javascript" src=".\testDd.js"></script>
+    <script>
+
+
+let userTaxCalculator = () => {
+  let amountInput = onlyNumberIn("Introduce el capital a calcular.");
+  let stateInput = prompt("Introduce el estado del establecimiento en el cual se está emitiendo la factura");
+  let result = taxCalculator(amountInput, stateInput);
+  return alert(result);
+};
+userTaxCalculator();
+
+
+    </script>
+  </body>
+</html>
