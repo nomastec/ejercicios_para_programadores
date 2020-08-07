@@ -20,6 +20,10 @@
     testDd(() => taxCalculator("27", "WISCONSIN"), "$27.00" + " $1.49" + " $28.48");
     testDd(() => taxCalculator("52", "wisconsin"), "$52.00" + " $2.86" + " $54.86");
     testDd(() => taxCalculator("1385", "wisconsin"), "$1385.00" + " $76.17" + " $1461.17");
+    testDd(() => taxCalculator("1385", "Mn"), "$1461.17");
+    testDd(() => taxCalculator("20", "Mn"), "$21.10");
+    testDd(() => taxCalculator("52", "Mn"), "$54.86");
+    testDd(() => taxCalculator("177", "Ny"), "$186.74");
 
 
     </script>
