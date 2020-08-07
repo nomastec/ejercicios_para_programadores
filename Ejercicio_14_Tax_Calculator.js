@@ -1,11 +1,13 @@
 
 
 let taxCalculator = (amount, state) => {
-  if (amount === "10") {
-    return "$10.00" + " $0.55" + " $10.55";
-  } else if (amount === "20") {
-    return "$20.00" + " $0.55" + " $21.10"
-  } else {
-    return "$27.00" + " $0.55" + " $28.48"
+  if (state === "WI" || state === "wi" || state === "Wisconsin" || state === "wisconsin") {
+    let amountNumber = parseInt(amount);
+    let rateTax = 5.5 / 100;
+    let totalRateTax = amountNumber * rateTax;
+    let totalRateTaxFixed = totalRateTax.toFixed(2);
+    let totalAmount = amountNumber + totalRateTax;
+    let totalAmountFixed = totalAmount.toFixed(2);
+    return "$" + amountNumber.toFixed(2) + " $" + totalRateTaxFixed + " $" + totalAmountFixed;
   }
 };
