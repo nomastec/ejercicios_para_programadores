@@ -7,8 +7,8 @@ let taxCalculator = (amount, state) => {
   let totalRateTaxFixed = totalRateTax.toFixed(2);
   let totalAmount = amountNumber + totalRateTax;
   let totalAmountFixed = totalAmount.toFixed(2);
-  if (state === "WI" || state === "wi" || state === "Wisconsin" || state === "wisconsin" || state === "WISCONSIN") {
-    return "$" + amountNumber.toFixed(2) + " $" + totalRateTaxFixed + " $" + totalAmountFixed;
+  if (state.toLowerCase() === "wi" || state.toLowerCase() === "wisconsin") {
+    return "The subtotal is $" + amountNumber.toFixed(2) + "\n The tax is $" + totalRateTaxFixed + "\n The total is $" + totalAmountFixed;
   }
-  return "$" + totalAmountFixed;
+  return "The total is $" + totalAmountFixed;
 };
