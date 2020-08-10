@@ -16,6 +16,7 @@
     testDd(() => taxCalculator("27", "WI"), "The subtotal is $27.00" + "\n The tax is $1.49" + "\n The total is $28.48");
     testDd(() => taxCalculator("27", "wi"), "The subtotal is $27.00" + "\n The tax is $1.49" + "\n The total is $28.48");
     testDd(() => taxCalculator("27", "Wisconsin"), "The subtotal is $27.00" + "\n The tax is $1.49" + "\n The total is $28.48");
+    testDd(() => taxCalculator("27", " Wisconsin                  "), "The subtotal is $27.00" + "\n The tax is $1.49" + "\n The total is $28.48");
     testDd(() => taxCalculator("27", "wisconsin"), "The subtotal is $27.00" + "\n The tax is $1.49" + "\n The total is $28.48");
     testDd(() => taxCalculator("27", "WISCONSIN"), "The subtotal is $27.00" + "\n The tax is $1.49" + "\n The total is $28.48");
     testDd(() => taxCalculator("27", "WIsCONsIN"), "The subtotal is $27.00" + "\n The tax is $1.49" + "\n The total is $28.48");
@@ -24,6 +25,7 @@
     testDd(() => taxCalculator("1385", "wisconsin"), "The subtotal is $1385.00" + "\n The tax is $76.17" + "\n The total is $1461.17");
     testDd(() => taxCalculator("1385", "Mn"), "The total is $1461.17");
     testDd(() => taxCalculator("1385", "Mn"), "The total is $1461.17");
+    testDd(() => taxCalculator("1385", "                                   Mn"), "The total is $1461.17");
     testDd(() => taxCalculator("20", "Mn"), "The total is $21.10");
     testDd(() => taxCalculator("52", "Mn"), "The total is $54.86");
     testDd(() => taxCalculator("177", "Ny"), "The total is $186.74");
