@@ -1,7 +1,8 @@
 
 let passValidation = (password, check) => {
-  if (password === "12345") {
+  if (password === "abc$123") {
+    return "Welcome!.";
+  } else {
     return "I don´t know you!.";
   }
-  return "Welcome!."
 };
